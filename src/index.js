@@ -27,11 +27,16 @@ app.post('/users', (request, response) => {
     username: username,
     todos: []
   }
+
+  users.push(user)
+
   return response.status(201).json(user)
 })
 
 app.get('/todos', checksExistsUserAccount, (request, response) => {
-  // Complete aqui
+  const { user } = request
+
+  return response.status(200).json(user)
 })
 
 app.post('/todos', checksExistsUserAccount, (request, response) => {
