@@ -3,6 +3,8 @@ const cors = require('cors')
 
 const { v4: uuidv4 } = require('uuid')
 
+// Teste
+
 const app = express()
 
 app.use(cors())
